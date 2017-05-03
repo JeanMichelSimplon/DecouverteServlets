@@ -7,6 +7,8 @@
 <title>AFFICHE HELLO WORD</title>
 </head>
 <body>
-HELLO WORLD
+<!-- UTILISATION de la saisie faite dans l'input de l'index.jsp -->
+${ param["nom"] }
+<!-- HELLO WORLD -->
 </body>
 </html>
