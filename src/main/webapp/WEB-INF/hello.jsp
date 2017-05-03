@@ -8,7 +8,7 @@
 </head>
 <body>
 <!-- UTILISATION de la saisie faite dans l'input de l'index.jsp -->
-${ param["nom"] }
-<!-- HELLO WORLD -->
+HELLO ${paramnom}
+
 </body>
 </html>

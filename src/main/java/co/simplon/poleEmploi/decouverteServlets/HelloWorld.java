@@ -38,9 +38,11 @@ public class HelloWorld extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher dispatcher;
-		dispatcher=request.getRequestDispatcher("hello.jsp");
-		dispatcher.forward(request, response);
+		String paramnom = request.getParameter("nom");
+		request.setAttribute("paramnom", paramnom);
+			RequestDispatcher dispatcher;
+		dispatcher = request.getRequestDispatcher("/WEB-INF/hello.jsp");
+			dispatcher.forward(request, response);
 	}
 
 	public void destroy() {
