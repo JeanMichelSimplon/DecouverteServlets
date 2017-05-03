@@ -2,13 +2,25 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 	<servlet>
 		<servlet-name>HelloWorld</servlet-name>
 		<servlet-class>co.simplon.poleEmploi.decouverteServlets.HelloWorld</servlet-class>
-	</servlet>
 
+	</servlet>
+	<servlet>
+		<servlet-name>GoodBye</servlet-name>
+		<servlet-class>co.simplon.poleEmploi.decouverteServlets.GoodBye</servlet-class>
+
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>HelloWorld</servlet-name>
 		<url-pattern>/bonjour</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GoodBye</servlet-name>
+		<url-pattern>/aurevoir</url-pattern>
 	</servlet-mapping>
 </web-app>
