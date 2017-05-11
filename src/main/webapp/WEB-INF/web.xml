@@ -13,8 +13,11 @@
 	<servlet>
 		<servlet-name>GoodBye</servlet-name>
 		<servlet-class>co.simplon.poleEmploi.decouverteServlets.GoodBye</servlet-class>
-
 	</servlet>
+	<servlet>
+		<servlet-name>CreerContact</servlet-name>
+		<servlet-class>co.simplon.poleEmploi.decouverteServlets.CreerContact</servlet-class>
+	</servlet>	
 	<servlet-mapping>
 		<servlet-name>HelloWorld</servlet-name>
 		<url-pattern>/bonjour</url-pattern>
@@ -23,4 +26,8 @@
 		<servlet-name>GoodBye</servlet-name>
 		<url-pattern>/aurevoir</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreerContact</servlet-name>
+		<url-pattern>/creerContact</url-pattern>
+	</servlet-mapping>	
 </web-app>
