@@ -2,6 +2,12 @@ package co.simplon.poleEmploi.decouverteServlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,7 +15,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mysql.fabric.xmlrpc.base.Array;
+
 import co.simplon.annuaire.domaine.Contact;
+import co.simplon.annuaire.domaine.Hobbies;
 
 // Extend HttpServlet class
 public class CreerContact extends HttpServlet {
@@ -50,10 +59,17 @@ public class CreerContact extends HttpServlet {
 		String email = request.getParameter("email");
 
 		Contact contact = new Contact();
+		Set<Hobbies> listHobbies = new HashSet<>();
+		
+		listHobbies.add(new Hobbies(1,"Violon"));
+		listHobbies.add(new Hobbies(2,"Piano"));
+		listHobbies.add(new Hobbies(2,"Jardinage"));		
+		contact.setHobbies(listHobbies);
 		contact.setEmail(email);
 		contact.setNom(nom);
 		contact.setPrenom(prenom);
-		request.setAttribute("contact", contact);		
+		contact.setHobbies(listHobbies);
+		request.setAttribute("contact", contact);
 		RequestDispatcher dispatcher;
 		dispatcher = request.getRequestDispatcher("afficherContact.jsp");
 		dispatcher.forward(request, response);
