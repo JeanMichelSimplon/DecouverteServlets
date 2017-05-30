@@ -6,7 +6,7 @@
 </head>
 <body>
 <form method="post" action="bonjour">
-   <p><input type="text" name="nom" /></p>
+   <p><input type="text" name="nom" /><input type="text" name="nom" /><input type="button" value="Bonjour"></p>
    <input type="submit" >
 </form>   
 </body>

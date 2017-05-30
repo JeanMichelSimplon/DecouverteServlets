@@ -18,6 +18,10 @@
 		<servlet-name>CreerContact</servlet-name>
 		<servlet-class>co.simplon.poleEmploi.decouverteServlets.CreerContact</servlet-class>
 	</servlet>	
+	<servlet>
+		<servlet-name>HelloAjax</servlet-name>
+		<servlet-class>co.simplon.poleEmploi.decouverteServlets.HelloAjax</servlet-class>
+	</servlet>	
 	<servlet-mapping>
 		<servlet-name>HelloWorld</servlet-name>
 		<url-pattern>/bonjour</url-pattern>
@@ -29,5 +33,9 @@
 	<servlet-mapping>
 		<servlet-name>CreerContact</servlet-name>
 		<url-pattern>/creerContact</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>HelloAjax</servlet-name>
+		<url-pattern>/HelloAjax</url-pattern>
 	</servlet-mapping>	
 </web-app>
